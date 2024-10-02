@@ -5,12 +5,12 @@ dotenv.config();
 
 export const dataSourceOptions: DataSourceOptions = {
   type: (process.env.DB_TYPE as any) ?? 'postgres',
-  host: process.env.DB_HOST,
+  host: process.env.DB_HOST ?? 'localhost',
   port: parseInt(process.env.DB_PORT, 10) ?? 5432,
-  username: process.env.DB_USERNAME,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_DATABASE,
-  synchronize: false,
+  username: 'postgres',
+  password: '51015',
+  database: 'test_db',
+  synchronize: true,
   bigNumberStrings: true,
   multipleStatements: true,
   logging: false,
