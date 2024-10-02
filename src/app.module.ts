@@ -5,6 +5,7 @@ import { LoggerModule } from 'nestjs-pino';
 import { TestModule } from './modules/test';
 import { dataSourceOptions } from './typeorm/orm.config';
 import { createLoggerOptions } from './shared/factories';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { createLoggerOptions } from './shared/factories';
     }),
     TypeOrmModule.forRoot(dataSourceOptions),
     TestModule,
+    AuthModule,
   ],
 })
 export class AppModule {}
