@@ -6,6 +6,7 @@ import { TestModule } from './modules/test';
 import { dataSourceOptions } from './typeorm/orm.config';
 import { createLoggerOptions } from './shared/factories';
 import { AuthModule } from './auth/auth.module';
+import { UserModule } from './modules/user/user.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { AuthModule } from './auth/auth.module';
     TypeOrmModule.forRoot(dataSourceOptions),
     TestModule,
     AuthModule,
+    UserModule,
   ],
 })
 export class AppModule {}
