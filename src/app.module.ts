@@ -7,6 +7,7 @@ import { dataSourceOptions } from './typeorm/orm.config';
 import { createLoggerOptions } from './shared/factories';
 import { AuthModule } from './auth/auth.module';
 import { UserModule } from './modules/user/user.module';
+import { ProfileModule } from './modules/profile/profile.module';
 
 @Module({
   imports: [
@@ -22,6 +23,7 @@ import { UserModule } from './modules/user/user.module';
     TestModule,
     AuthModule,
     UserModule,
+    ProfileModule,
   ],
 })
 export class AppModule {}
